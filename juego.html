@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quién Quiere Ser Ingeniero? - Edumedia</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="millonario-bg">
+
+    <!-- PANTALLA 1: REGISTRO DE JUGADOR -->
+    <div id="register-screen" class="container" style="max-width: 500px; margin-top: 10vh;">
+        <div class="card" style="background: rgba(16, 25, 53, 0.95); border: 2px solid #809bce; text-align: center; padding: 2rem;">
+            <h2 style="color: #ff9900; margin-bottom: 1.5rem;">Registro de Jugador</h2>
+            <form id="player-form">
+                <div style="margin-bottom: 1rem;">
+                    <input type="text" id="player-name" placeholder="Nombre" required class="input-field">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <input type="text" id="player-lastname" placeholder="Apellido" required class="input-field">
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Comenzar a Jugar</button>
+            </form>
+            <div style="margin-top: 1.5rem;">
+                <a href="index.html" class="oval-btn" style="display: inline-block;">Volver al Inicio</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANTALLA 2: EL JUEGO (Oculto al inicio) -->
+    <div id="game-screen" style="display: none; width: 100%; display: flex; flex-direction: column; align-items: center;">
+        
+        <!-- BARRA SUPERIOR -->
+        <header class="top-bar">
+            <div class="left-controls">
+                <span id="welcome-user" style="font-size: 0.9rem; color: #ffcc00; font-weight: bold; align-self: center;"></span>
+                <a href="index.html" class="oval-btn" title="Salir">🚶 Salir</a>
+            </div>
+            <div class="lifelines-group">
+                <button id="btn-5050" class="oval-btn lifeline-btn">50:50</button>
+                <button id="btn-call" class="oval-btn lifeline-btn">📞</button>
+                <button id="btn-audience" class="oval-btn lifeline-btn">👥</button>
+            </div>
+        </header>
+
+        <!-- LOGO CENTRAL -->
+        <div class="logo-container">
+            <div class="logo-ring">
+                <div class="logo-inner">
+                    <span class="logo-text">QUIEN QUIERE SER</span>
+                    <span class="logo-title">INGENIERO?</span>
+                    <span class="logo-text">QUIEN QUIERE SER</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR PRINCIPAL -->
+        <main class="game-container">
+            <div class="hex-box question-box">
+                <h2 id="question-text">Cargando pregunta...</h2>
+            </div>
+
+            <div class="level-badge">Pregunta <span id="level-indicator">1</span> de <span id="total-questions">15</span></div>
+
+            <div class="hex-grid" id="options-container"></div>
+
+            <p id="feedback-msg" class="feedback-msg"></p>
+
+            <!-- MODALES DE COMODINES -->
+            <div id="call-modal" class="custom-modal" style="display: none;">
+                <h3>📞 Comodín de la Llamada</h3>
+                <p id="timer-text" class="timer-highlight">Tiempo restante: 60s</p>
+                <p id="friend-advice"></p>
+            </div>
+
+            <div id="audience-modal" class="custom-modal" style="display: none;">
+                <h3>👥 Votación del Público</h3>
+                <div id="audience-results"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- PANTALLA 3: TABLA DE RÉCORDS / FIN DEL JUEGO (Oculto al inicio) -->
+    <div id="records-screen" class="container" style="display: none; max-width: 600px;">
+        <div class="card" style="background: rgba(16, 25, 53, 0.95); border: 2px solid #809bce; text-align: center;">
+            <h2 id="final-title" style="color: #ffcc00;">¡Juego Finalizado!</h2>
+            <p id="final-score-text" style="font-size: 1.2rem; margin-bottom: 1.5rem;"></p>
+            
+            <h3 style="color: #ff9900; border-bottom: 1px solid #3c50b8; padding-bottom: 5px;">🏆 Tabla de Mejores Récords</h3>
+            <div id="records-list" style="margin: 15px 0; max-height: 200px; overflow-y: auto; text-align: left;">
+                <!-- Se cargan los récords guardados -->
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 15px;">
+                <button onclick="location.reload()" class="btn">Jugar Nuevamente</button>
+                <a href="index.html" class="oval-btn" style="padding: 10px 20px;">Ir al Inicio</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

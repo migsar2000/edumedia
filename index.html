@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>EduMedia - ¿Quién quiere ser ingeniero?</title>
+    <link rel="stylesheet" href="./style.css?v=2.0">
+</head>
+<body class="millonario-bg">
+
+    <!-- CABECERA DE BIENVENIDA -->
+    <header class="top-bar" style="justify-content: center; margin-top: 10px;">
+        <h1 style="color: var(--gold-bright); text-shadow: 0 0 10px var(--gold); margin: 0; font-size: 1.8rem;">
+            PORTAFOLIO DIGITAL EDUMEDIA
+        </h1>
+    </header>
+
+    <!-- LOGO CENTRAL CON LA NUEVA TEMÁTICA -->
+    <div class="logo-container">
+        <div class="logo-ring">
+            <div class="logo-inner">
+                <span class="logo-text">TRIVIA ACADÉMICA</span>
+                <span class="logo-title" style="font-size: 1.3rem;">¿QUIÉN QUIERE SER INGENIERO?</span>
+                <span class="logo-text">PROYECTO EDUMEDIA</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL DEL PORTAFOLIO -->
+    <main class="game-container" style="gap: 20px;">
+        
+        <!-- SECCIÓN 1: ¿QUIÉNES SOMOS Y QUÉ ES EDUMEDIA? -->
+        <section class="hex-box" style="padding: 25px 30px;">
+            <h2 style="color: var(--gold); margin-top: 0; font-size: 1.4rem;">💡 ¿Qué es EduMedia?</h2>
+            <p style="font-size: 1rem; color: #d0d8ff; line-height: 1.5; margin-bottom: 0;">
+                <strong>EduMedia</strong> es una plataforma de software educativo e interactivo diseñada como proyecto multimedia universitario. Fusiona la ingeniería de software con técnicas avanzadas de <em>gamificación</em> (bajo la temática de <strong>¿Quién quiere ser ingeniero?</strong>) para transformar el aprendizaje técnico en una experiencia dinámica, competitiva y memorable.
+            </p>
+        </section>
+
+        <!-- SECCIÓN 2: ¿PARA QUÉ SIRVE? (OBJETIVOS) -->
+        <section class="hex-box" style="padding: 25px 30px;">
+            <h2 style="color: var(--gold); margin-top: 0; font-size: 1.4rem;">🎯 ¿Para qué sirve?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 15px; text-align: left;">
+                <div style="background: rgba(8, 3, 37, 0.6); padding: 12px 15px; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <h3 style="color: var(--gold-bright); margin: 0 0 5px 0; font-size: 1.05rem;">🧠 Evaluación Formativa</h3>
+                    <p style="font-size: 0.88rem; color: #aebcff; margin: 0;">Permite poner a prueba conceptos técnicos mediante una progresión de dificultad adaptable.</p>
+                </div>
+                <div style="background: rgba(8, 3, 37, 0.6); padding: 12px 15px; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <h3 style="color: var(--gold-bright); margin: 0 0 5px 0; font-size: 1.05rem;">⚡ Retroalimentación</h3>
+                    <p style="font-size: 0.88rem; color: #aebcff; margin: 0;">Ofrece respuestas visuales al instante e integra comodines funcionales (50:50, llamada y audiencia).</p>
+                </div>
+                <div style="background: rgba(8, 3, 37, 0.6); padding: 12px 15px; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <h3 style="color: var(--gold-bright); margin: 0 0 5px 0; font-size: 1.05rem;">💾 Persistencia Local</h3>
+                    <p style="font-size: 0.88rem; color: #aebcff; margin: 0;">Guarda un ranking histórico mediante <code>localStorage</code> operando de manera offline.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: CARRUSEL (SLIDE) DEL EQUIPO DESARROLLADOR -->
+        <section class="hex-box" style="padding: 25px 20px;">
+            <h2 style="color: var(--gold); margin-top: 0; font-size: 1.4rem;">👥 Equipo de Desarrollo</h2>
+            
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+                
+                <div class="carousel-slide-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        
+                        <!-- Tarjeta 1: Ronald Requena -->
+                        <div class="dev-card">
+                            <div class="dev-avatar">RR</div>
+                            <h3 class="dev-name">Ronald Requena</h3>
+                            <span class="dev-role">Desarrollador Principal & Lógica JS</span>
+                            <p class="dev-desc">Encargado de la programación de controladores, estructura de preguntas progresivas y gestión de comodines interactivos.</p>
+                        </div>
+
+                        <!-- Tarjeta 2: Donald Molina -->
+                        <div class="dev-card">
+                            <div class="dev-avatar">DM</div>
+                            <h3 class="dev-name">Donald Molina</h3>
+                            <span class="dev-role">Diseñador UI/UX & Maquetación CSS</span>
+                            <p class="dev-desc">Responsable del diseño retro-futurista, estética de concurso de TV, sombras de neón y efectos visuales de la interfaz.</p>
+                        </div>
+
+                        <!-- Tarjeta 3: Jarris Guerra -->
+                        <div class="dev-card">
+                            <div class="dev-avatar">JG</div>
+                            <h3 class="dev-name">Jarris Guerra</h3>
+                            <span class="dev-role">Especialista Multimedia & Datos</span>
+                            <p class="dev-desc">Encargado de la persistencia de datos en LocalStorage, arquitectura del banco de preguntas y adaptación multimedia.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
+            </div>
+            
+            <div class="carousel-dots" id="carouselDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: MÓDULO PRINCIPAL DE LA TRIVIA -->
+        <section class="hex-box" style="padding: 25px 30px;">
+            <h2 style="color: var(--gold); margin-top: 0; font-size: 1.4rem;">🚀 Demostración Interactiva</h2>
+            <p style="font-size: 1rem; color: #d0d8ff; margin-bottom: 20px;">
+                Accede al simulador en tiempo real para iniciar el registro e interactuar con la trivia:
+            </p>
+            
+            <div style="display: flex; justify-content: center;">
+                <a href="juego.html" class="option-btn" style="justify-content: center; width: 100%; max-width: 420px; text-decoration: none; font-size: 1.1rem; padding: 12px 20px;">
+                    <span class="option-prefix">►</span> Iniciar ¿Quién quiere ser ingeniero?
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: TECNOLOGÍAS DEL PROYECTO -->
+        <section class="hex-box" style="padding: 20px 30px;">
+            <h2 style="color: var(--gold); margin-top: 0; font-size: 1.2rem;">🛠️ Stack de Tecnologías Multimedia</h2>
+            <p style="font-size: 0.95rem; color: #aebcff; margin: 5px 0;">
+                HTML5 • CSS3 (Flexbox/Grid/Animations) • JavaScript ES6+ • Python HTTP Server • LocalStorage API
+            </p>
+        </section>
+
+    </main>
+
+    <!-- SCRIPT DEL CARRUSEL -->
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+        
+        let currentIndex = 0;
+        const totalSlides = 3;
+
+        function updateCarousel(index) {
+            currentIndex = index;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        nextBtn.addEventListener('click', () => {
+            let index = (currentIndex + 1) % totalSlides;
+            updateCarousel(index);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            let index = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel(index);
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const index = parseInt(e.target.dataset.index);
+                updateCarousel(index);
+            });
+        });
+    </script>
+</body>
+</html>
